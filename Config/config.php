@@ -1,5 +1,6 @@
 <?php
 
 return [
-    'name' => 'Icommerceflatrate'
+    'name' => 'Icommerceflatrate',
+    'shippingName' => 'icommerceflatrate'
 ];

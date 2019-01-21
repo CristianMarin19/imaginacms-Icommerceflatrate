@@ -1,7 +1,7 @@
 {
     "name": "Icommerceflatrate",
     "alias": "icommerceflatrate",
-    "description": "",
+    "description": "Flat Rate - ShippingMethod Module to Icommerce",
     "keywords": [],
     "version": "1.0.0",
 	"active": 1,

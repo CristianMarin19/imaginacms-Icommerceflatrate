@@ -38,6 +38,7 @@ class IcommerceflatrateServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishConfig('icommerceflatrate', 'permissions');
+        $this->publishConfig('icommerceflatrate', 'config');
 
         $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
     }

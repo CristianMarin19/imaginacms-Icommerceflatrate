@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'single' => 'Flatrate',
+    'description' => 'The description of module',
     'list resource' => 'List icommerceflatrates',
     'create resource' => 'Create icommerceflatrates',
     'edit resource' => 'Edit icommerceflatrates',
@@ -14,6 +16,7 @@ return [
         'create icommerceflatrate' => 'Create a icommerceflatrate',
     ],
     'table' => [
+        'cost' => 'Cost'
     ],
     'form' => [
     ],

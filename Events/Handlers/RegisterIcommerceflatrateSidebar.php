@@ -27,7 +27,7 @@ class RegisterIcommerceflatrateSidebar implements \Maatwebsite\Sidebar\SidebarEx
 
     public function handle(BuildingSidebar $sidebar)
     {
-        $sidebar->add($this->extendWith($sidebar->getMenu()));
+        //$sidebar->add($this->extendWith($sidebar->getMenu()));
     }
 
     /**
