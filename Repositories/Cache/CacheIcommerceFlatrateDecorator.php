@@ -13,4 +13,17 @@ class CacheIcommerceFlatrateDecorator extends BaseCacheDecorator implements Icom
         $this->entityName = 'icommerceflatrate.icommerceflatrates';
         $this->repository = $icommerceflatrate;
     }
+
+     /**
+     * List or resources
+     *
+     * @return mixed
+     */
+    public function calculate($parameters,$conf)
+    {
+        return $this->remember(function () use ($parameters,$conf) {
+            return $this->repository->calculate($parameters,$conf);
+        });
+    }
+
 }

@@ -32,30 +32,22 @@ class IcommerceFlatrateApiController extends BaseApiController
     /**
      * Init data
      * @param Requests request
-     * @param Requests array(items,total)
-     * @param Requests options array (countryCode,postCode,country)
-     * @return route
+     * @param Requests array products - items (object)
+     * @param Requests array products - total
+     * @return mixed
      */
     public function init(Request $request){
 
         try {
 
-            $shippingName = config('asgard.icommerceflatrate.config.shippingName');
-
             // Configuration
+            $shippingName = config('asgard.icommerceflatrate.config.shippingName');
             $attribute = array('name' => $shippingName);
             $shippingMethod = $this->shippingMethod->findByAttributes($attribute);
 
-            // Msj
-            $response["msj"] = "success";
+            $response = $this->icommerceFlatrate->calculate($request->all(),$shippingMethod->options);
 
-            // Items
-            $response["items"] = null;
-
-            // Price
-            $response["price"] = $shippingMethod->options->cost;
-            $response["priceshow"] = true;
-            
+           
           } catch (\Exception $e) {
             //Message Error
             $status = 500;

@@ -11,4 +11,10 @@
 
 ## API
 
-    https://icommerce.imagina.com.co/api/icommerceflatrate
+    ### Parameters
+        * @param Requests request
+        * @param Requests array "products" - items (object) 
+        * @param Requests array "products" - total (float)
+        
+    ### Example
+        https://icommerce.imagina.com.co/api/icommerceflatrate
