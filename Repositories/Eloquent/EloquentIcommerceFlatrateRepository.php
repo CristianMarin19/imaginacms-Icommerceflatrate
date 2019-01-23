@@ -17,7 +17,7 @@ class EloquentIcommerceFlatrateRepository extends EloquentBaseRepository impleme
 
         // Price
         $response["price"] = $conf->cost;
-        $response["priceshow"] = false;
+        $response["priceshow"] = true;
 
         return $response;
 
