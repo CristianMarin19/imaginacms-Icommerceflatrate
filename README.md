@@ -17,4 +17,4 @@
         * @param Requests array "products" - total (float)
         
     ### Example
-        https://icommerce.imagina.com.co/api/icommerceflatrate
+        https://mydomain/api/icommerceflatrate
