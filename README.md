@@ -1,8 +1,9 @@
-# asgardcms-icommerceflatrate
+# imaginacms-icommerceflatrate (ShippingMethod)
 
 ## Seeder
-
-    run php artisan module:seed Icommerceflatrate
+```bash
+php artisan module:seed Icommerceflatrate
+```
 
 ## Configurations
 

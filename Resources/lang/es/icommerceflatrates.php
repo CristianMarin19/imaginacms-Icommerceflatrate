@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'single' => 'Flatrate',
+    'single' => 'Tarifa Plana',
     'description' => 'La descripcion del Modulo',
     'list resource' => 'List icommerceflatrates',
     'create resource' => 'Create icommerceflatrates',
