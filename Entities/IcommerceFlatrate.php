@@ -2,7 +2,7 @@
 
 namespace Modules\Icommerceflatrate\Entities;
 
-use Dimsav\Translatable\Translatable;
+use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
 
 class IcommerceFlatrate extends Model

@@ -2,6 +2,7 @@
 
 namespace Modules\Icommerceflatrate\Providers;
 
+use Illuminate\Support\Arr;
 use Illuminate\Support\ServiceProvider;
 use Modules\Core\Traits\CanPublishConfiguration;
 use Modules\Core\Events\BuildingSidebar;
@@ -29,7 +30,7 @@ class IcommerceflatrateServiceProvider extends ServiceProvider
         $this->app['events']->listen(BuildingSidebar::class, RegisterIcommerceflatrateSidebar::class);
 
         $this->app['events']->listen(LoadingBackendTranslations::class, function (LoadingBackendTranslations $event) {
-            $event->load('icommerceflatrates', array_dot(trans('icommerceflatrate::icommerceflatrates')));
+            $event->load('icommerceflatrates', Arr::dot(trans('icommerceflatrate::icommerceflatrates')));
             // append translations
 
         });
