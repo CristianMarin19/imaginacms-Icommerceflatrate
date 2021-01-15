@@ -68,4 +68,7 @@ return [
                 'type' => 'number',
             ]
         ],
+
+    ]
+
 ];
