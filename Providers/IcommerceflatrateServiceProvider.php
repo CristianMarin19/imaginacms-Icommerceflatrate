@@ -38,7 +38,7 @@ class IcommerceflatrateServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $this->publishConfig('icommerceflatrate', 'permissions');
+      $this->mergeConfigFrom($this->getModuleConfigFilePath('icommerceflatrate', 'permissions'), "asgard.icommerceflatrate.permissions");
         $this->publishConfig('icommerceflatrate', 'config');
         $this->publishConfig('icommerceflatrate', 'crud-fields');
 

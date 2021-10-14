@@ -39,11 +39,16 @@ class IcommerceFlatrateApiController extends BaseApiController
     public function init(Request $request){
 
         try {
-
+            $data = $request->all();
             // Configuration
             $shippingName = config('asgard.icommerceflatrate.config.shippingName');
             $attribute = array('name' => $shippingName);
-            $shippingMethod = $this->shippingMethod->findByAttributes($attribute);
+            
+            if(isset($data["methodId"])){
+              $shippingMethod = $this->shippingMethod->getItem($data["methodId"]);
+            }else{
+              $shippingMethod = $this->shippingMethod->findByAttributes($attribute);
+            }
 
             $response = $this->icommerceFlatrate->calculate($request->all(),$shippingMethod->options);
 
