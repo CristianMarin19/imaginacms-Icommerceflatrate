@@ -42,7 +42,7 @@ class IcommerceflatrateServiceProvider extends ServiceProvider
         $this->publishConfig('icommerceflatrate', 'config');
         $this->publishConfig('icommerceflatrate', 'crud-fields');
 
-        $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+        //$this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
     }
 
     /**
