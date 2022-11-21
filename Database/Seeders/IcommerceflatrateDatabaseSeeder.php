@@ -17,6 +17,8 @@ class IcommerceflatrateDatabaseSeeder extends Seeder
     {
       Model::unguard();
   
+      $this->call(IcommerceflatrateModuleTableSeeder::class);
+      
       $methods = config('asgard.icommerceflatrate.config.methods');
   
       if(count($methods)>0){
